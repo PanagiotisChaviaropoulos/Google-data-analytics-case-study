@@ -1,0 +1,27 @@
+--Combining the 12 csv files to create a new table
+
+  CREATE TABLE `2023_biketrips.combined` AS (
+SELECT * FROM `trim-mode-426212-u7.2023_biketrips.2023_01` AS Jan
+UNION ALL
+SELECT * FROM `trim-mode-426212-u7.2023_biketrips.2023_02` AS Feb
+UNION ALL
+SELECT * FROM `trim-mode-426212-u7.2023_biketrips.2023_03` AS Mar
+UNION ALL
+SELECT * FROM `trim-mode-426212-u7.2023_biketrips.2023_04` AS Apr
+UNION ALL
+SELECT * FROM `trim-mode-426212-u7.2023_biketrips.2023_05` AS May
+UNION ALL
+SELECT * FROM `trim-mode-426212-u7.2023_biketrips.2023_06` AS Jun
+UNION ALL
+SELECT * FROM `trim-mode-426212-u7.2023_biketrips.2023_07` AS Jul
+UNION ALL
+SELECT * FROM `trim-mode-426212-u7.2023_biketrips.2023_08` AS Aug
+UNION ALL
+SELECT * FROM `trim-mode-426212-u7.2023_biketrips.2023_09` AS Sep
+UNION ALL
+SELECT * FROM `trim-mode-426212-u7.2023_biketrips.2023_10` AS Oct
+UNION ALL
+SELECT * FROM `trim-mode-426212-u7.2023_biketrips.2023_11` AS Nov
+UNION ALL
+SELECT * FROM `trim-mode-426212-u7.2023_biketrips.2023_12` AS Dec
+)
