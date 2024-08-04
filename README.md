@@ -39,7 +39,8 @@ Now I need to clean my new table in order to be ready for my analysis. The steps
   ![types_of_bikes](https://github.com/user-attachments/assets/38e77784-7d0b-4832-8163-c8ea90759cc0)
   
 5. From the columns started_at and ended_at I can create two new helpful columns ride_length and day_of_week that will help in the analysis.
-6. The columns start_station_id, end_station_id, start_lat, start_lng, end_lat, end_lng will not add anything to the analysis, so I need to remove them.
-7. There are 875.716 missing values in the start_station_name and 929.202 missing values in the end_station_name, so the respective rows need to be removed.
+6. In the new column ride_length I want to remove too short trips (under a minute) to get rid of irrelvant to the analysis trips, and negative trips (trips where the started_at column is later than the ended_at column) which is a mistake in the entry.
+7. The columns start_station_id, end_station_id, start_lat, start_lng, end_lat, end_lng will not add anything to the analysis, so I need to remove them.
+8. There are 875.716 missing values in the start_station_name and 929.202 missing values in the end_station_name, so the respective rows need to be removed.
 
 ## Analyze
