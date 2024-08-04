@@ -25,7 +25,7 @@ The data has been made available by Motivate International Inc. under this [lice
 In order to combine, clean and analyze the data I will use BigQuery because the size of the files is too big for spreadsheets to handle and even if it could, it would take a substantial amount of time.
 ### Data combination
 First I created a dataset named 2023_biketrips. In that dataset I created 12 tables, one for each month, and I uploaded all the csv files. Then I combined all the tables in a unified one containing all the data from 2023. From the details in the new table we see that there are 5.719.877 rows.
-
+### Data cleaning
 Now I need to clean my new table in order to be ready for my analysis. The steps I use to determine how to clean my table are the following.
 1. I run a Query to determine the number of null values in each column. The following table shows the results.
    
@@ -42,3 +42,4 @@ Now I need to clean my new table in order to be ready for my analysis. The steps
 6. The columns start_station_id, end_station_id, start_lat, start_lng, end_lat, end_lng will not add anything to the analysis, so I need to remove them.
 7. There are 875.716 missing values in the start_station_name and 929.202 missing values in the end_station_name, so the respective rows need to be removed.
 
+## Analyze
