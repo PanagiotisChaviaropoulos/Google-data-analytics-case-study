@@ -20,4 +20,14 @@ SELECT
   COUNT(ride_id)-COUNT(DISTINCT ride_id) AS no_of_duplicate_rows
 FROM `trim-mode-426212-u7.2023_biketrips.combined`
 
---
+--length of ride_id
+SELECT 
+  LENGTH(ride_id) AS length_of_ride_id, 
+  COUNT(ride_id) AS no_of_rows
+FROM `trim-mode-426212-u7.2023_biketrips.combined` 
+GROUP BY 
+  length_of_ride_id
+
+--different types of bikes
+SELECT DISTINCT rideable_type
+FROM `trim-mode-426212-u7.2023_biketrips.clean_data` 
