@@ -22,10 +22,14 @@ There are 12 files one for each month of 2023 and each file contains 13 columns 
 The data has been made available by Motivate International Inc. under this [licence](https://divvybikes.com/data-license-agreement). However due to data-privacy issues I can't use riders’ personally identifiable information. This means that I won’t be able to connect pass purchases to credit card numbers to determine if casual riders live in the Cyclistic service area or if they have purchased multiple single passes.
 
 ## Process
+The relevant code in SQL:[SQL Data combination](https://github.com/PanagiotisChaviaropoulos/Google-data-analytics-case-study/blob/main/SQL%20Data%20combination).
+
 In order to combine, clean and analyze the data I will use BigQuery because the size of the files is too big for spreadsheets to handle and even if it could, it would take a substantial amount of time.
 ### Data combination
-First I created a dataset named 2023_biketrips. In that dataset I created 12 tables, one for each month, and I uploaded all the csv files. Then I combined all the tables in a unified one containing all the data from 2023. From the details in the new table we see that there are 5.719.877 rows.
+First I created a dataset named 2023_biketrips. In that dataset I created 12 tables, one for each month, and I uploaded all the csv files. Some of those files exceeded the limited amount of 100Mb in BigQuery so I uploaded them with Google cloud. Then I combined all the tables in a unified one containing all the data from 2023. From the details in the new table we see that there are 5.719.877 rows.
 ### Data cleaning
+The relevant code in SQL:[SQL Data cleaning](https://github.com/PanagiotisChaviaropoulos/Google-data-analytics-case-study/blob/main/SQL%20Data%20cleaning).
+
 Now I need to clean my new table in order to be ready for my analysis. The steps I use to determine how to clean my table are the following.
 1. I run a Query to determine the number of null values in each column. The following table shows the results.
    
@@ -44,6 +48,8 @@ Now I need to clean my new table in order to be ready for my analysis. The steps
 8. There are 875.716 missing values in the start_station_name and 929.202 missing values in the end_station_name, so the respective rows need to be removed.
 
 ## Analyze
+The relevant code in SQL:[SQL analysis](https://github.com/PanagiotisChaviaropoulos/Google-data-analytics-case-study/blob/main/SQL%20analysis).
+
 Now it is time to perform my analysis on the clean table. In order to identify trends and patterns I will query the following.
 1. The minimum, maximum and average ride_length for members and casuals.
 2. The number of rides by each type of bike for members and casuals.
@@ -54,23 +60,31 @@ Now it is time to perform my analysis on the clean table. In order to identify t
 ## Share
 After I queried the abovementioned I used Tableau to visualize most of them.
 First the results of the minimum, maximum and average ride_length are shown in the table below.
+
  ![min_max_avg](https://github.com/user-attachments/assets/fa57c5d8-6dd2-4a25-a8a4-0e89f30a7379)
 
 We notice that members tend to use the bikes for a shorter amount of time than casuals do.
+
  ![Rides_for_each_bike_type](https://github.com/user-attachments/assets/bd4f203f-eac8-4609-810d-7645c5a5d40c)
 
 It is clear that the most popular bike is the classic bike and that members tend to do more trips than casuals. Another observation is that membeers do not use docked bikes at all.
+
 ![number_of_trips_per_day](https://github.com/user-attachments/assets/5b31e983-b6a6-4968-96ab-e763daad42db)
 
 We see that casuals use the bikes more during the weekends for leisure, while members tend to use the bikes more during weekdays to commute to work.
+
 ![no_of_trips_per_hour](https://github.com/user-attachments/assets/62710fe7-8a41-4365-ba84-403f734371b9)
 
 From the graph it is clear that members during the day use the bikes most at 8 in the morning and again at 6 in the afternoon to go to work and back home. Casual riders on the other hand start using the bikes more during noon and reach the highest level during the afternoon. This implies again on touristic and leisure activities.
+
 ![avg_ride_length_per_day](https://github.com/user-attachments/assets/1a6f5a05-edfc-40ed-95ce-6eafeb6f532f)
 
 We notice in this graph that casual riders use the bikes longer than members on average and especially during weekends. Moreover combining this graph with the previous we reach to a conclusion that casual riders ride longer than members, however members ride more frequently.
 
 ## Act
-
+After determining the differences between casual riders and members we can develop marketing strategies to target casual riders and convert them to members.
+1. As we noticed casual riders use the bikes more during the weekends, thus the company can provide weekend passes for members only.
+2. Another observation is that casual riders ride significantly longer than members. Offering discounts for longer rides as a membership bonus may be a good way to convert them to members.
+3. Since the afternoon is the most popular time to ride for casuals, and the classic bike is the most popular out of the three, the company can combine those two and create offers for classic bikes during the afternoon for members only.
 
 
