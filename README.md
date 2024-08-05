@@ -67,7 +67,7 @@ We notice that members tend to use the bikes for a shorter amount of time than c
 
  ![Rides_for_each_bike_type](https://github.com/user-attachments/assets/bd4f203f-eac8-4609-810d-7645c5a5d40c)
 
-It is clear that the most popular bike is the classic bike and that members tend to do more trips than casuals. Another observation is that membeers do not use docked bikes at all.
+It is clear that the most popular bike is the classic bike and that members tend to do more trips than casuals. Another observation is that members do not use docked bikes at all.
 
 ![number_of_trips_per_day](https://github.com/user-attachments/assets/5b31e983-b6a6-4968-96ab-e763daad42db)
 
