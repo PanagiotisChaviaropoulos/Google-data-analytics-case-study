@@ -1,0 +1,41 @@
+-- The minimu, maximum and average ride_length
+SELECT 
+  member_casual,
+  min(ride_length) AS min_duration,
+  max(ride_length) AS max_duration,
+  avg(ride_length) AS average_duration
+FROM `trim-mode-426212-u7.2023_biketrips.clean_data` 
+GROUP BY member_casual
+
+--number of rides by each bike type
+SELECT 
+  member_casual, 
+  rideable_type, 
+  COUNT(*) AS no_of_rides  
+FROM `trim-mode-426212-u7.2023_biketrips.clean_data` 
+GROUP BY member_casual, rideable_type
+
+--number of rides per day of week
+SELECT 
+  day_of_week,
+  member_casual,
+  COUNT(*)AS no_of_trips
+FROM `trim-mode-426212-u7.2023_biketrips.clean_data` 
+GROUP BY day_of_week,member_casual
+
+--number of rides per hour
+SELECT 
+  EXTRACT(HOUR FROM started_at) AS hour, 
+  member_casual, 
+  COUNT(*) AS no_of_trips 
+FROM `trim-mode-426212-u7.2023_biketrips.clean_data` 
+GROUP BY member_casual, hour
+ORDER BY hour
+
+--avg ride_length per day
+SELECT 
+  avg(ride_length) AS average_ride_length, 
+  day_of_week, 
+  member_casual
+FROM `trim-mode-426212-u7.2023_biketrips.clean_data` 
+GROUP BY member_casual, day_of_week
