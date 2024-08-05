@@ -1,14 +1,14 @@
 # Google-data-analytics-case-study
-## Summary
+### Summary
 In this project I am working for a fictional company named Cyclistic along with some other key team members, and I will be performing several junior data analyst real life tasks to adress the business problem.
 In order to answer the business questions, I will utilize the six steps of the data analysis process: Ask, Prepare, Process, Analyze, Share and Act.
-## Company information
+### Company information
 In 2016, Cyclistic launched a successful bike-share offering. Since then, the program has grown to a fleet of 5,824 bicycles that are geotracked and locked into a network of 692 stations across Chicago. 
 Cyclistic sets itself apart by also offering reclining bikes, hand tricycles, and cargo bikes, making bike-share more inclusive to people with disabilities and riders who can’t use a standard two-wheeled bike. The majority of riders opt for traditional bikes; about 8% of riders use the assistive options. Cyclistic users are more likely to ride for leisure, but about 30% use the bikes to commute to work each day.
 
 Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members. Cyclistic’s finance analysts have concluded that annual members are much more profitable than casual riders. The director of marketing (Moreno) has set a clear goal: Design marketing strategies aimed at converting casual riders into annual members. In order to do that, however, the team needs to better understand how annual members and casual riders differ.
 
-## Scenario
+### Scenario
 Let's assume I am a junior data analyst working on the marketing analyst team at Cyclistic. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. Therefore, our team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, the team will design a new marketing strategy to convert casual riders into annual members. But first, Cyclistic executives must approve the recommendations, so they must be backed up with compelling data insights and professional data visualizations.
 
 ## Ask
@@ -50,3 +50,27 @@ Now it is time to perform my analysis on the clean table. In order to identify t
 3. The number of trips per day of week.
 4. The number of trips per hour.
 5. The average ride_length per day.
+
+## Share
+After I queried the abovementioned I used Tableau to visualize most of them.
+First the results of the minimum, maximum and average ride_length are shown in the table below.
+ ![min_max_avg](https://github.com/user-attachments/assets/fa57c5d8-6dd2-4a25-a8a4-0e89f30a7379)
+
+We notice that members tend to use the bikes for a shorter amount of time than casuals do.
+ ![Rides_for_each_bike_type](https://github.com/user-attachments/assets/bd4f203f-eac8-4609-810d-7645c5a5d40c)
+
+It is clear that the most popular bike is the classic bike and that members tend to do more trips than casuals. Another observation is that membeers do not use docked bikes at all.
+![number_of_trips_per_day](https://github.com/user-attachments/assets/5b31e983-b6a6-4968-96ab-e763daad42db)
+
+We see that casuals use the bikes more during the weekends for leisure, while members tend to use the bikes more during weekdays to commute to work.
+![no_of_trips_per_hour](https://github.com/user-attachments/assets/62710fe7-8a41-4365-ba84-403f734371b9)
+
+From the graph it is clear that members during the day use the bikes most at 8 in the morning and again at 6 in the afternoon to go to work and back home. Casual riders on the other hand start using the bikes more during noon and reach the highest level during the afternoon. This implies again on touristic and leisure activities.
+![avg_ride_length_per_day](https://github.com/user-attachments/assets/1a6f5a05-edfc-40ed-95ce-6eafeb6f532f)
+
+We notice in this graph that casual riders use the bikes longer than members on average and especially during weekends. Moreover combining this graph with the previous we reach to a conclusion that casual riders ride longer than members, however members ride more frequently.
+
+## Act
+
+
+
