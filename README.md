@@ -44,3 +44,9 @@ Now I need to clean my new table in order to be ready for my analysis. The steps
 8. There are 875.716 missing values in the start_station_name and 929.202 missing values in the end_station_name, so the respective rows need to be removed.
 
 ## Analyze
+Now it is time to perform my analysis on the clean table. In order to identify trends and patterns I will query the following.
+1. The minimum, maximum and average ride_length for members and casuals.
+2. The number of rides by each type of bike for members and casuals.
+3. The number of trips per day of week.
+4. The number of trips per hour.
+5. The average ride_length per day.
